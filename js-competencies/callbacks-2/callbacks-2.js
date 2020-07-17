@@ -10,6 +10,12 @@
 //should return the SECOND callback param invoked.
 
   //Code here
+let invokesCallbacks = (num, cb, cb2) => {
+  if (num > 10) {
+    return cb();
+  } else {
+    return cb2()
+  }};
 
 
 //////////////////PROBLEM 2////////////////////
@@ -25,7 +31,7 @@
   function timedGreeting(callback){
 
     //Code here
-
+      
     
   }
 
