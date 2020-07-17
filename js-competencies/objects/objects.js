@@ -12,13 +12,13 @@ var duck = {
 //1. Using dot notation to access the duck's "name" property.
 // var accessByDotNotation = duck."name"
 // var accessByDotNotation = Object[duck].name
-// var accessByDotNotation = duck.name
+var accessByDotNotation = duck.name
 
 //2. Using bracket notation to access duck's "bites" property.
 // var accessByBracketNotation = duck{"bites"}
 // var accessByBracketNotation = Object[duck][bites]
 // var accessByBracketNotation = duck[bites]
-// var accessByBracketNotation = duck["bites"]
+var accessByBracketNotation = duck["bites"]
 // var accessByBracketNotation = duck(bites)
 
 
@@ -35,7 +35,9 @@ var person = {
 }
 
 //CODE HERE
-
+person.moveCities = function(city) {
+  this.city = city;
+}
 
 ///////////////////Problem 3///////////////////
 
@@ -67,7 +69,17 @@ var sampleOutput = [
 ]
 
 //CODE HERE
-
+function keyAccessor(arr, obj) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let key in obj) {
+      if (arr[i] === key) {
+        newArr.push(obj[key])
+      }
+    }
+  }
+  return newArr;
+}
 
 
 ///////////////////Problem 4///////////////////
@@ -78,7 +90,13 @@ var sampleOutput = [
 //getVals should return the new array.
 
 //CODE HERE
-
+let getVals = obj => {
+  let newArr = [];
+  for (let prop in obj) {
+    newArr.push(obj[prop])
+  }
+  return newArr;
+}
 
 ///////////////////Problem 5///////////////////
 
@@ -93,3 +111,4 @@ var doors = {
 }
 
 //Code here
+let doorKeys = Object.keys(doors)
