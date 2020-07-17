@@ -11,7 +11,15 @@
 var sunsetColors = ["brown", "purple", "pink", "red", "orange", "yellow"]
 
 //Code here
-
+let sunset = sunsetColors => {
+    let newColors = [];
+    for (let i = 0; i < sunsetColors.length; i++) {
+        newColors.push(sunsetColors[i]);
+        newColors[0] = 'blue';
+    }
+    return newColors;
+    
+}
 
 //////////////////PROBLEM 2////////////////////
 
